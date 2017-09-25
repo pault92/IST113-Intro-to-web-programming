@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+	height: 85px;
+	background-color:#E0FFFF;
+	border: 10px solid green;
+	padding: 10px;
+	text-align:center;
+}
+.sidebar{
+	height:500px;
+	background-color:#E0FFFF;
+	border: 10px solid green;
+	padding: 10px;
+	float:left;
+	overflow:hidden;
+}
+.content{
+	height:500px;
+	background-color:#E0FFFF;
+	border: 10px solid green;
+	padding: 10px;
+	overflow:hidden;
+}
+.footer{
+	background-color:#E0FFFF;
+	border: 10px solid green;
+	height:75px;
+	overflow:hidden;
+}
