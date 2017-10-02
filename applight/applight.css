@@ -1,0 +1,20 @@
+#switch {
+	height:100px;
+	width:100px;
+	background-color:red;
+
+}
+
+#wall {
+	height:100px;
+	width:200px;
+	margin:auto;
+	background-color:grey;
+}
+
+p{
+	text-align:center;
+	vertical-align:center;
+	line-height:100px;
+	font-size:50px;
+}
