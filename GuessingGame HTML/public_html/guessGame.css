@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 8, 2017, 11:26:16 AM
+    Author     : Paul
+*/
+#intro{
+    border: 3px solid;
+    margin: auto;
+    width: 650px;
+    height: 300px;
+    position: relative; 
+    font-family: Courier;
+    font-size: 22px;
+    text-align: center;
+}
+#play{
+	margin: auto;
+	padding: 5px;
+	border:none;
+	height: 70px;
+	width: 5px:
+}
+#inttext{
+    margin: auto;
+    align-content: center;
+    padding: 50px;
+}
+#guess{
+    padding-top: 15px;
+    padding-left: 775px;
+}
+input{
+    border: none;
+    height: 75px;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+}
+#button{
+    border: none;
+    height: 75px;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+}
+#anw{
+	padding-top: 15px;
+    padding-left: 775px;
+}
+body{
+    background-color: paleturquoise;
+}
