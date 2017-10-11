@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HTML Guessing Game</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="guessGame.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="intro">
+            <div id="inttext">
+                <Strong>Enter a number for a player to guess!</strong>
+            </div>
+			<div id="num2guess">
+				<form id ="inputNum">
+                                    <input id="numIn" type="text" placeholder="Number" name="number">
+				</form>
+				<button id="submit">
+					<input id="button" type="Submit" value="Submit" onclick="number()">
+				</button>
+			</div>
+        </div>
+        <div id="guess">
+            <form id ="input">
+                <input id="inputguess" type="text" placeholder="Take a Guess" name="guess">
+            </form>
+            <button id="submit">
+                <input id="button" type="Submit" value="Submit" onclick="guess(true)">
+            </button>
+        </div>
+		<div id="reset">
+			<form>
+				<input id="resetbutton" type="submit" value="Reset">
+			</form>
+		</div>
+		<script src="guessGame.js"></script>
+    </body>
+</html>
