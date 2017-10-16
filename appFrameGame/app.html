@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App</title>
+		<link href="app.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div id="main">
+				<div id="intro">
+					<div id="inttext">
+						<Strong>Enter a number for a player to guess!</strong>
+					</div>
+				<div id="num2guess">
+					<form id ="inputNum">
+                        <input id="numIn" type="text" placeholder="Number" name="number">
+					</form>
+					<button id="submit">
+						<input id="button" type="Submit" value="Submit" onclick="number()">
+					</button>
+				</div>
+			</div>
+			<div id="guess">
+				<form id ="input">
+					<input id="inputguess" type="text" placeholder="Take a Guess" name="guess">
+				</form>
+				<button id="submit2">
+					<input id="button" type="Submit" value="Submit" onclick="guess(true)">
+				</button>
+			</div>
+			<div id="reset">
+				<form>
+					<input id="resetbutton" type="submit" value="Reset">
+				</form>
+			</div>
+		</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>
