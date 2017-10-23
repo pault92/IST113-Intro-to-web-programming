@@ -43,15 +43,7 @@ function TaskAtHandApp()
 		saveTaskList();
 	}
 	function addTaskElement(taskName){
-		$("button.delete", $task).click(function(){
-			removeTask($task);
-		});
-		$("button.move-up", $task).click(function(){
-			moveTask($task, true);
-		});
-		$("button.move-down", $task).click(function(){
-			moveTask($task, false);
-		});
+
 		
 		function removeTask($task){
 			$task.remove();
@@ -80,6 +72,7 @@ function TaskAtHandApp()
 		$("button.move-down",$task).click(function(){
 			$task.insertAfter($task.next());
 		});
+		
 		$("span.task-name",$task).click(function(){
 			onEditTaskName($(this));
 		});
