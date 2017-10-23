@@ -57,11 +57,11 @@ function TaskAtHandApp()
 			$task.remove();
 			saveTaskList();
 		}
-		function moveTak($task, moveUp){
+		function moveTask($task, moveUp){
 			if(moveUp){
 				$task.insertBefore($task.prev());
 			}else{
-				$task.insertAfter($task.nxt());
+				$task.insertAfter($task.next());
 			}
 			saveTaskList();
 		}
