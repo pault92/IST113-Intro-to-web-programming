@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App</title>
+		<link href="app.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="app.js"></script>
+		<script src="weatherWidget.js"></script>
+		<link href="weather.xml></link>
+	</head>
+	<body>
+		<div id="app">
+			<header>App</header>
+			<div id="main">
+				<div id="weather-widget">
+					<div class="loading">
+						<p>Checking the weather...</p>
+						<img src="images/loading.gif" alt="Loading..."/>
+					</div>
+					<div class="results">
+						<header>
+							<img src="" alt="Condition"/>Current weather<div class="location"><span></span></div>
+						</header>
+						<!-- data-field="" is where you call the API field which is then formatted -->
+						<section class="conditions">
+							Conditions: <span data-field="shortForecast"></span><br/>
+							Temperature: <span data-field="temperature"></span><span data-field="temperatureUnit"></span><br/>
+							Wind: <span data-field="windSpeed"></span><br/>
+							Wind Direction: <span data-field="windDirection"></span><br/>
+							<br/>
+							Detailed Forecast: <span data-field="detailedForecast"></span><br/>
+						</section>
+					</div>
+			</div>
+			<div id="controls">
+				<div>
+					Latitude: <input id="latitude" type="text"/><br/>
+					Longitude: <input id="longitude" type="text"/>
+				</div>
+					<button id="getWeather">Check</button>
+				<div class="error">
+					Error: <span></span>
+				</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>
