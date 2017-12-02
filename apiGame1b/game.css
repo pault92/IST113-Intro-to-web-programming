@@ -1,0 +1,60 @@
+header{
+	position: relative;
+	margin: auto;
+	width:175px;
+	height: 35px;
+	padding: 10px;
+	font-size: 40px;
+	color: Yellow;
+}body{
+	background-color: #a5ebe5;
+}
+#Main{
+	position: relative;
+	margin: auto;
+	border-style: dotted;
+	width: 1000px;
+	height: 750px;
+}
+#srt{
+	position: relative;
+	margin: auto;
+	padding: 10px;
+	padding-left: 150px;
+}
+#start{
+	height: 50px;		
+	width: 750px;
+}
+#cat{
+	position: relative;
+	margin: auto;
+	padding: 10px;
+	padding-top: 200px;
+	padding-left: 200px;
+}
+#AnsSection{
+	position: relative;
+	margin: auto;
+	padding: 10px;
+	padding-left: 200px;
+	padding-top: 20px;
+}
+#AnsSection > button{
+	position: relative;
+	padding-left: 10px;
+	width: 200px;
+	
+	
+}
+#result{
+	position: relative;
+	margin: auto;
+	padding: 10px;
+	padding-left: 200px;
+}
+footer{
+	position: relative;
+	margin: auto;
+	padding: 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>APIGame</title>
+	<link href="game.css" rel="styleSheet"/>
+	<script src="lib/jquery-3.2.1.min.js"></script>
+	<script src="game.js"></script>
+	<script src="gameApp.js"></script>
+</head>
+<body>
+	<header>Jeopardy!!!</header>
+	<div id="Main">
+		<div id="srt">
+			<button id="start">Start</button>
+		</div>
+		<div id="cat">
+			Category: <span id="Category"></span><br/>
+			Question: <span id="question"></span><br/>
+		</div>
+		<div id="AnsSection">
+			Answer: <input id="AnsBx">
+			<button id="ans">Answer</button>
+		</div>
+		
+		<div id="useAns">
+			Your Answer: <span id="userA"></span><br/>
+		</div>
+		<div id="result">
+			Result: <span id="Result"></span><br/>
+		</div>
+	</div>
+	<div id=error>
+		Error: <span></span>
+	</div>
+	<footer>Created by Paul Trindall November 2017</footer>
+</body>
+</html>
