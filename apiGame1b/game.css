@@ -5,7 +5,7 @@ header{
 	height: 35px;
 	padding: 10px;
 	font-size: 40px;
-	color: Yellow;
+	color: yellow;
 }
 @keyframes gameAnimation{
 	from{opacity: 0;}
@@ -13,7 +13,7 @@ header{
 	
 }
 body{
-	background-color: #a5ebe5;
+	background-color: #FA8072;
 }
 #Main{
 	position: relative;
@@ -38,6 +38,7 @@ body{
 	padding: 10px;
 	padding-top: 200px;
 	padding-left: 200px;
+	font-weight: bold
 }
 #AnsSection{
 	position: relative;
@@ -66,8 +67,9 @@ body{
 	animation-duration: 4s;
 	animation-timing-function: ease;
 }
-footer{
+footer,#pts{
 	position: relative;
 	margin: auto;
 	padding: 10px;
+	padding-top: 25px;
 }

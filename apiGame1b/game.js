@@ -76,25 +76,25 @@ function game(){
 	function guessCount(guess){
 		
 		//alert($questionPts);
-		
+		$("#AnsBx").val('');
 		if(guess == true){
 			$gamePts = $gamePts + $questionPts;
 			$("#gamePts").html($gamePts);
 			getQuestion();
 		}
-		else{
-	
-			if($gamePts > 0){
-				$gamePts = $gamePts - $questionPts;
-				$("#gamePts").html($gamePts);
-				getQuestion();
-			}
-			else{
-				$("#gameStatus").show();
-				$("#gamePts").html("0");
-				$("#gameSts").html("You lost!!!");
+		else if($gamePts > 0){
+			$gamePts = $gamePts - $questionPts;
+			$("#gamePts").html($gamePts);
+			getQuestion();
+		}
+		else if($gamePts <= 0){
+			$("#gameStatus").show();
+			$("#gamePts").html(0);
+			$("#gameSts").html("You lost!!!");
 				
-			}
+			$("#start").on("click",function(){
+				location.reload();
+			});
 		}
 	}
 }
