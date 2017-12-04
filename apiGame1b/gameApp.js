@@ -1,3 +1,5 @@
+
+/*
 function MyApp(){
 	this.start = function(){
 		
@@ -10,12 +12,10 @@ function MyApp(){
 		var Game = new game();
 		//listens for the click of the start button and sends calls the constructor of game.js
 		$("#start").on("click", function(){
-			Game.start();
+			//Game.start();
 		});
 		$("#ans").on("click",function(){
-			var click = true;
-			Game.start(click);
-			
+			//Game.start();
 		});
 	}
 }
@@ -23,3 +23,4 @@ $(function() {
 	window.app = new MyApp();
 	window.app.start();
 });
+*/
