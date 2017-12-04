@@ -7,13 +7,22 @@ function game(){
 	
 	this.start = function(click){
 		//hides the error
+		$("#cat").hide();
 		$("#error").hide();
 		$("#useAns").hide();
+		$("#gameStatus").hide();
+		$("#result").hide();
+		$("#AnsSection").hide();
 		$("#start").on("click", function(){
 			getQuestion();
 		});
 		$("#ans").on("click",function(){
 			checkUserAnswer();
+		});
+		$("#AnsBx").keypress(function(e){
+			if(e.which == 13){
+				checkUserAnswer();
+			}
 		});
 	}
 	function getQuestion(){
@@ -29,31 +38,30 @@ function game(){
 		});
 	}
 	function populateQuestion(data){
-		
+		$("#cat").show();
+		$("#AnsSection").show();
+		$("#result").show();
 		$("#Category").html(data[0].category.title);
 		$("#question").html(data[0].question);
 		$correct = (data[0].answer);
-		$questionPts = data[0].value;
-		
-		checkUserAnswer();
+		$questionPts = (data[0].value);
+		$("#points").html($questionPts);
+		$("#Result").show();
+		$("#Result").html($correct);
 	}
 	//correct goes into the attributes
 	function checkUserAnswer(){
 		//changes the api variable into a string.
-		//var $Correct = this.correct ? this.correct : "";
-		var $Correct = null;
+		
+		var $Correct;
 		$Correct = $correct;
 		$("#useAns").show();
 		var $userGuess = null;
 		$userGuess = $('#AnsBx').val().toString();
 		
-		$("#Result").show();
-		$("#Result").html($correct);
-		alert($Correct);
-		
 		if($userGuess.toLowerCase() == $Correct.toLowerCase()){
 			$("#userA").html($userGuess)
-			alert($Correct);
+			//alert($Correct);
 			guessCount(true);
 		}else if($userGuess.toLowerCase() != $Correct.toLowerCase()){
 			$("#userA").html($userGuess);
@@ -67,24 +75,27 @@ function game(){
 	}
 	function guessCount(guess){
 		
-		alert($questionPts);
+		//alert($questionPts);
 		
 		if(guess == true){
 			$gamePts = $gamePts + $questionPts;
-			$guesses = $guesses+1;
-			//alert($gamePts);
-			populateQuestion();
+			$("#gamePts").html($gamePts);
+			getQuestion();
 		}
-		if(guess != true){
-			$guesses = $guesses+1;
-			//alert($guesses);
+		else{
+	
+			if($gamePts > 0){
+				$gamePts = $gamePts - $questionPts;
+				$("#gamePts").html($gamePts);
+				getQuestion();
+			}
+			else{
+				$("#gameStatus").show();
+				$("#gamePts").html("0");
+				$("#gameSts").html("You lost!!!");
+				
+			}
 		}
-		//take varaible from checkUserAnswer to determine what the counter will do.
-		//if user answer = game anwser 1 try and win = true, print number of tries
-		
-		//if user answer != game anwser ct+1 anwser again
-		
-		//if user try = 5 end game show answer to question.
 	}
 }
 $(function() {
